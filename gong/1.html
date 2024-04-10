@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片九宫格</title>
+<style>
+    #container {
+        width: 300px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <img src="1.jpg" alt="Image 1">
+    <img src="2.jpg" alt="Image 2">
+    <img src="3.jpg" alt="Image 3">
+    <img src="4.jpg" alt="Image 4">
+    <img src="5.jpg" alt="Image 5">
+    <img src="6.jpg" alt="Image 6">
+    <img src="7.jpg" alt="Image 7">
+    <img src="8.jpg" alt="Image 8">
+    <img src="9.jpg" alt="Image 9">
+</div>
+</body>
+</html>

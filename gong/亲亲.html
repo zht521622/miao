@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANGELA</title>
+<style>
+    #container {
+        width: 900px;
+        height: 900px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    img {
+        max-width: 150%;
+        max-height: 150%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .danmu {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        animation: danmuAnimation 5s linear forwards;
+    }
+
+    @keyframes danmuAnimation {
+        from { top: 0; opacity: 1; }
+        to { top: -50px; opacity: 0; }
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <img src="亲亲.jpg"  ontouchstart="changeContent(this)">
+</div>
+
+<script>
+function changeContent(element) {
+    var danmu = document.createElement("div");
+    danmu.textContent = "要亲亲哦！"; // 设置弹幕内容
+    danmu.classList.add("danmu");
+    document.body.appendChild(danmu); // 在页面中添加弹幕元素
+
+    setTimeout(function() {
+        danmu.remove(); 
+        window.location.href = "3.html";// 5秒后移除弹幕元素
+    }, 4000);
+}
+</script>
+</body>
+</html>
