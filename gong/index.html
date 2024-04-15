@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANGELA</title>
+<style>
+    #container {
+        width: 300px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+</style>
+</head>
+<body>
+<div id="container">
+    <img src="img/1.jpg" alt="Image 1" ontouchstart="redirectTo('撒娇.html')">
+    <img src="img/2.jpg" alt="Image 2" ontouchstart="redirectTo('卖萌.html')">
+    <img src="img/3.jpg" alt="Image 3" ontouchstart="redirectTo('撒娇2.html')">
+    <img src="img/4.jpg" alt="Image 4" ontouchstart="redirectTo('害羞.html')">
+    <img src="img/5.jpg" alt="Image 5" ontouchstart="redirectTo('亲亲.html')">
+    <img src="img/6.jpg" alt="Image 6" ontouchstart="redirectTo('害羞2.html')">
+    <img src="img/7.jpg" alt="Image 7" ontouchstart="redirectTo('生气.html')">
+    <img src="img/8.jpg" alt="Image 8" ontouchstart="redirectTo('亲亲.html')">
+    <img src="img/9.jpg" alt="Image 9" ontouchstart="redirectTo('开心2.html')">
+    
+</div>
+
+<script>
+function redirectTo(destination) {
+    window.location.href = destination; // 跳转到指定页面
+}
+</script>
+</body>
+</html>
